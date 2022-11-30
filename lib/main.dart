@@ -6,7 +6,11 @@ import 'package:autoservice_app/themes/autoservice_theme.dart';
 
 import 'package:autoservice_app/views/screens/screens.dart';
 
-void main() {
+import 'di/Locator.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDI();
   runApp(const AutoserviceApp());
 }
 
