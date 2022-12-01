@@ -19,7 +19,7 @@
 //
 //     final product = productFromMap(jsonString);
 
-// FROM QUICKTYPE JSON FORMATER
+// FROM QUICKTYPE JSON PARSER
 import 'dart:convert';
 
 class Product {
