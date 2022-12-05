@@ -61,7 +61,7 @@ class AutoserviceTheme {
   // 3
   static ThemeData light() {
     return ThemeData(
-      backgroundColor: Color.fromARGB(235, 188, 178, 178),
+      backgroundColor: const Color.fromARGB(235, 188, 178, 178),
       brightness: Brightness.light,
       checkboxTheme: CheckboxThemeData(
         fillColor: MaterialStateColor.resolveWith(

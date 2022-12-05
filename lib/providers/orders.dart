@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-// provider CartItem class
 import 'cart.dart';
+
+// provider CartItem class
 
 class OrderItem {
   final String id;

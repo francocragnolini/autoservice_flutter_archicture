@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+
+import 'package:provider/provider.dart';
+
 import '../../themes/autoservice_theme.dart';
+import '../../providers/products.dart';
 
 class CartSummary extends StatelessWidget {
   const CartSummary({
@@ -8,35 +12,33 @@ class CartSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final products = Provider.of<Products>(context).items;
     return Container(
       margin: const EdgeInsets.all(20),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(24, 16, 24, 4),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
+            padding: const EdgeInsetsDirectional.fromSTEB(24, 16, 24, 10),
+            child: Column(
               children: [
-                Column(
-                  children: [
-                    Icon(
-                      Icons.shopping_cart,
-                      size: 50,
-                      // color: AutoserviceTheme.light().backgroundColor,
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "Detalle del Ticket",
-                      style: AutoserviceTheme.lightTextTheme.headline2,
-                    )
-                  ],
+                const Icon(
+                  Icons.shopping_cart,
+                  size: 50,
+                  // color: AutoserviceTheme.light().backgroundColor,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "Detalle del Ticket",
+                  style: AutoserviceTheme.lightTextTheme.headline2,
                 )
               ],
             ),
+          ),
+          const Divider(
+            height: 2,
           ),
           Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(24, 30, 24, 0),
