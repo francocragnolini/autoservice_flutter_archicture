@@ -21,6 +21,7 @@ class Cart with ChangeNotifier {
   Map<String, CartItem> _items = {};
 
   // getter - copy of _items
+  //show the cartItems in the list
   Map<String, CartItem> get items {
     return {..._items};
   }
@@ -39,7 +40,8 @@ class Cart with ChangeNotifier {
     return total;
   }
 
-  //method: add item
+  // USE THIS METHOD TO MAKE AN HTTP REQUESTO TO MOCKAPI
+  //method: add an item to the cart
   void addItem(String productId, double price, String title) {
     // if product exists updates the quantity
     if (_items.containsKey(productId)) {
@@ -65,24 +67,26 @@ class Cart with ChangeNotifier {
     notifyListeners();
   }
 
+  //removes the item from the cart list
   void removeItem(String productId) {
     // Easiest way to remove an element from a Map
     _items.remove(productId);
     notifyListeners();
   }
 
-  // clear cart items
+  // clear all items in the cart-list
   void clear() {
     _items = {};
     notifyListeners();
   }
 
+  // WATCH THE DIFFERENCE BETWEEN THE OTHER REMOVE-ITEM METHOD
   // remove Cartitem
   void removeSingleItem(String productId) {
     if (!_items.containsKey(productId)) {
       return;
     }
-    // because I'm checking if there's not a product up
+    // because I'm checking if there's not a product
     // so I asure
     if (_items[productId]!.quantity > 1) {
       _items.update(
