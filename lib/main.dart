@@ -1,4 +1,5 @@
 import 'package:autoservice_app/providers/products.dart';
+import 'package:autoservice_app/views/screens/payment_method_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -27,10 +28,11 @@ class AutoserviceApp extends StatelessWidget {
       child: MaterialApp(
         title: 'autoservice app',
         theme: autoserviceTheme,
-        initialRoute: "purchase_screen",
+        initialRoute: "payment_method_screen",
         routes: {
           "init_screen": (context) => const InitScreen(),
           "purchase_screen": (context) => const PurchaseScreen(),
+          "payment_method_screen": (context) => const PaymentMethodScreen(),
         },
       ),
     );
