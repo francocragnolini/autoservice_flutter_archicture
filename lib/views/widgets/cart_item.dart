@@ -25,7 +25,7 @@ class CartItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
       child: Container(
         width: MediaQuery.of(context).size.width,
         height: 75,

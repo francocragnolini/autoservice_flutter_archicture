@@ -9,6 +9,8 @@ import '../../providers/products.dart';
 import '../../themes/autoservice_theme.dart';
 import '../widgets/cart_item.dart';
 
+/// TODO:
+
 class PurchaseScreen extends StatelessWidget {
   const PurchaseScreen({super.key});
 
@@ -20,14 +22,7 @@ class PurchaseScreen extends StatelessWidget {
         color: Colors.grey[300],
         child: Row(
           children: [
-            // doesnt work: it's not updating based on the items in the product list
-            products.length == 0
-                ? const FallBackBox(
-                    title: "Seems you dont have any items in your cart",
-                    description:
-                        "Please add an item to the cart through the scan bar",
-                    icon: Icons.add)
-                : buildCustomLeftColumn(products),
+            buildCustomLeftColumn(products),
             buildCustomRightColumn(),
           ],
         ),
@@ -129,7 +124,6 @@ class PurchaseScreen extends StatelessWidget {
     );
   }
 }
-
 
 // class _ButtonsBox extends StatelessWidget {
 //   const _ButtonsBox({

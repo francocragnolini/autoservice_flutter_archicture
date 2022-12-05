@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import '../../themes/autoservice_theme.dart';
 
+///TODO: cambiar icono configuracion
+///funcionalidad boton configuracion: requerir login
+/// Navegar  a la pantalla de compra
+///
+
 class InitScreen extends StatelessWidget {
   const InitScreen({super.key});
 

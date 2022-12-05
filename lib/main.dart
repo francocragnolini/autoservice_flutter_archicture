@@ -28,7 +28,7 @@ class AutoserviceApp extends StatelessWidget {
       child: MaterialApp(
         title: 'autoservice app',
         theme: autoserviceTheme,
-        initialRoute: "payment_method_screen",
+        initialRoute: "purchase_screen",
         routes: {
           "init_screen": (context) => const InitScreen(),
           "purchase_screen": (context) => const PurchaseScreen(),
